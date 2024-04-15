@@ -1,0 +1,39 @@
+
+<div #tablaMovimientos>
+   
+  
+  <div class="imagenB">
+    <img src="/assets/letraBanco.png" alt=""></div>
+    <h2>Registros de movimientos asociados al numero de cuenta: {{numeroCuenta}}</h2>
+    <table   class="table table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Numero De Cuenta</th>
+            <th>Valor</th>
+            <th>Fecha</th>
+            <th>Clase de movimiento</th>
+            <th>Sucursal</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let movimiento of movimientos">
+            <td>{{ movimiento.id }}</td>
+            <td>{{ numeroCuenta }}</td>
+            <td>{{ movimiento.valor }}</td>
+            <td>{{ movimiento.fecha }}</td>
+            <td>{{ movimiento.claseMovimiento }}</td>
+            <td>{{ movimiento.sucursal }}</td>    
+                           
+          </tr>                         
+                  
+          
+        </tbody>  
+       
+      </table> 
+      <div class="img">
+        <img class="image" src="/assets/imgconsejo.png" alt=""></div>
+</div>
+<button (click)="generarPDF()" class="btn" style="background-color: #fdda24; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#ffcc00'" onmouseout="this.style.backgroundColor='#fdda24'">Generar PDF </button> 
+

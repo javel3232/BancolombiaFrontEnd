@@ -1,0 +1,118 @@
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+            style="background: #9874ea;">
+            <div class="featured-image mb-3 " style=" margin-top: 10px;">
+                <img  src="https://cdn.dynamicyield.com/api/8775742/images/5d3ca84dfa5d__banner_2_tu360.png" class="rounded-4" style="width: 480px; height: 350px;">
+            </div>
+           
+        </div>
+
+
+        <div class="col-md-6 right-box">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h1>Registrar Movimiento</h1>
+                    <p>Bienbenido a Registrar Movimiento.</p>
+                </div>
+                <form (ngSubmit)="onSubmit()" class="formT" #movimientoForm = "ngForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="">Valor</label>
+                            <input class="form-control" id="valor" placeholder="$ valor" [(ngModel)]="movimiento.valor"
+                                name="valor"
+                                required
+                                #valor = "ngModel"
+                                >
+                                <div class="alert alert-danger" *ngIf="valor.invalid && (valor.dirty || valor.touched)">
+                                    <div *ngIf="valor.errors['required']">
+                                        El Valor de Cuenta es Requerida
+                                    </div>
+    
+                                </div>
+                                <label class="alert alert-danger" *ngIf="valor.invalid && (valor.dirty || valor.touched)"for="">
+                                    <label *ngIf="valor.errors['required']" for="">
+                                        
+                                    </label>
+                                </label>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Número de Cuenta</label>
+                            <input class="form-control" id="numeroCuenta" placeholder="Numero de Cuenta"
+                                [(ngModel)]="movimiento.numeroCuenta" name="numeroCuenta"
+                                required
+                                #numeroCuenta = "ngModel"
+                                >
+                                <div class="alert alert-danger" *ngIf="numeroCuenta.invalid && (numeroCuenta.dirty || numeroCuenta.touched)">
+                                    <div *ngIf="numeroCuenta.errors['required'] ">
+                                        El Número de cuenta es Requerida
+                                    </div>
+    
+                                </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Fecha</label>
+                            <input type="date" class="form-control" id="fecha" 
+                                [(ngModel)]="movimiento.fecha" name="fecha"
+                                required
+                                #fecha = "ngModel"
+                                >
+                                <div class="alert alert-danger" *ngIf="fecha.invalid && (fecha.dirty || fecha.touched)">
+                                    <div *ngIf="fecha.errors['required'] ">
+                                        La Fecha es Requerida
+                                    </div>
+    
+                                </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputState">Tipo de Movimiento</label>
+                            <select id="inputState" class="form-control" [(ngModel)]="movimiento.claseMovimiento"
+                                name="tipoMovimiento"
+                                required
+                                #tipoMovimiento = "ngModel"
+                                >
+                                <option selected>Retiro en Cajero Automatico</option>
+                                <option selected>Retiro Sucursal Fisica</option>
+                                <option selected>Envio De Dinero</option>
+                            </select>
+                            <div class="alert alert-danger" *ngIf="tipoMovimiento.invalid && (tipoMovimiento.dirty || tipoMovimiento.touched)">
+                                <div *ngIf="fecha.errors['required'] ">
+                                    El Tipo de Movimiento es Requerido
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputState">Sucursal</label>
+                            <select id="inputState" class="form-control" [(ngModel)]="movimiento.sucursal"
+                                name="sucursal"
+                                required
+                                #sucursal = "ngModel"
+                                >
+                                <option selected>EXITO ENVIGADO</option>
+                                <option selected>EXITO SAN ANTONIO</option>
+                                <option selected>EXITO ROBLEDO</option>
+                                <option selected>C.C PREMIUM PLAZA</option>
+                                <option selected>C.C ARKADIA</option>
+                                <option selected>C.C SAN ANTONIO</option>
+                                <option selected>OLIMPICA POBLADO</option>
+
+                            </select>
+                            <div class="alert alert-danger" *ngIf="sucursal.invalid && (sucursal.dirty || sucursal.touched)">
+                                <div *ngIf="sucursal.errors['required'] ">
+                                    La Sucuersal es Requerida
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" [disabled]="!movimientoForm.form.valid" style="background-color: #fdda24; transition: background-color 0.3s;" class="btn btn-warning" onmouseover="this.style.backgroundColor='#ffcc00'" onmouseout="this.style.backgroundColor='#fdda24'">Registrar Movimiento</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

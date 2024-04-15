@@ -1,0 +1,106 @@
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+            style="background: #00C389;">
+            <div class="featured-image mb-3 " style=" margin-top: 10px;">
+                <img  src="https://cdn.dynamicyield.com/api/8775742/images/6d9b5915e19c__banner_2.png" class="rounded-4" style="width: 480px; height: 350px;">
+            </div>
+           
+        </div>
+
+
+        <div class="col-md-6 right-box">
+            <div class="row align-items-center">
+                <div class="header-text mb-4">
+                    <h1>Registrar Cuenta</h1>
+                    <p>Bienbenido.</p>
+                </div>
+                <form (ngSubmit)="onSubmit()" class="formT" #cuentaForm = "ngForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="">Número de Cuenta</label>
+                            <input  class="form-control" id="numeroDeCuenta" placeholder="Numero de cuenta" [(ngModel)]="cuenta.numeroCuenta" 
+                             name="numeroCuenta"
+                             required
+                             #numeroCuenta = "ngModel"
+
+                            >
+                            <div class="alert alert-danger" *ngIf="numeroCuenta.invalid && (numeroCuenta.dirty || numeroCuenta.touched)">
+                                <div *ngIf="numeroCuenta.errors['required']">
+                                    El Número de Cuenta es Requerida
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Titular</label>
+                            <input  class="form-control" id="titular" placeholder="Titular" [(ngModel)]="cuenta.titular" 
+                             name="titular"
+                             required
+                             #titular = "ngModel"
+                             >
+                             <div class="alert alert-danger" *ngIf="titular.invalid && (titular.dirty || titular.touched)">
+                                <div *ngIf="titular.errors['required']">
+                                    El Titular es Requerido
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Documento</label>
+                            <input class="form-control" id="documento" placeholder="Documento" [(ngModel)]= "cuenta.documento" 
+                            name="documento"
+                            required
+                            #documento = "ngModel"
+                            >
+                            <div class="alert alert-danger" *ngIf="documento.invalid && (documento.dirty || documento.touched)">
+                                <div *ngIf="documento.errors['required']">
+                                    El Número de Documento es Requerido
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputState">Tipo de Cuenta</label>
+                            <select id="inputState" class="form-control" [(ngModel)]="cuenta.tipoCuenta"
+                             name="tipoCuenta"
+                             required
+                             #tipoCuenta = "ngModel"
+                            >
+                                <option selected>Cuenta Corriente</option>
+                                <option>Cuenta de Ahorros</option>
+                            </select>
+                            <div class="alert alert-danger" *ngIf="tipoCuenta.invalid && (tipoCuenta.dirty || tipoCuenta.touched)">
+                                <div *ngIf="tipoCuenta.errors['required']">
+                                    El Tipo de Cuenta es Requerido
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="">Saldo</label>
+                            <input class="form-control" id="saldo" placeholder="$ Saldo" [(ngModel)]= "cuenta.saldo" 
+                             name="saldo"
+                             required
+                             #saldo="ngModel"
+                            >
+                            <div class="alert alert-danger" *ngIf="saldo.invalid && (saldo.dirty || saldo.touched)">
+                                <div *ngIf="saldo.errors['required']">
+                                    El Saldo es Requerido
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                   
+                   
+                    <button type="submit" [disabled]="!cuentaForm.form.valid" style="background-color: #fdda24; transition: background-color 0.3s;" class="btn btn-warning" onmouseover="this.style.backgroundColor='#ffcc00'" onmouseout="this.style.backgroundColor='#fdda24'">Registrar Cuenta</button>
+                </form>
+        
+
+            </div>
+        </div>
+    </div>
+</div>

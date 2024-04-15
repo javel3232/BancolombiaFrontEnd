@@ -1,0 +1,16 @@
+.imagenLogo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+.nav-item{
+    color: wheat;
+}

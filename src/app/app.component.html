@@ -1,0 +1,30 @@
+<nav  class="navbar navbar-expand-sm  bg-dark navbar-dark  navegador">
+    <div>
+        
+    </div>
+    <div class="imagenLogo" >
+        <img src="assets/imgColombia.png" alt="" style="width: 200px;">
+    </div>
+    <div class="menu">
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <a routerLink="cuentas" routerLinkActive="active" class="nav-link">Lista de Cuentas</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="crear-cuenta" routerLinkActive="active" class="nav-link">Registrar Cuenta</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="registrar-movimientos" routerLinkActive="active" class="nav-link">Registrar Movimento</a>
+            </li>
+    
+        </ul>
+
+    </div>
+    
+
+</nav>
+
+<div class="container">
+   <router-outlet></router-outlet>
+</div>

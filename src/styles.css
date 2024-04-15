@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    background-color:#F7F7F7; 
+    background-image: url("https://autenticacion.apps.bancolombia.com/static/media/trazo-desktop.3de67dbd4b31f3798f8a1d3e3a90197c.svg");
+  
+
+   
+}
+

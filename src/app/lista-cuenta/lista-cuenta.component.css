@@ -1,0 +1,27 @@
+.tableCuentas{
+    border-radius: 16px;
+   padding: 2em;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   -moz-box-pack: center;
+   justify-content: center;
+   -moz-box-align: center;
+   align-items: center;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 8px;
+   background-color: #FF7F41;
+ }
+
+.Registro{
+  padding: 2em;
+  -moz-box-pack: center;
+   justify-content: center;
+   -moz-box-align: center;
+   align-items: center;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 8px;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+ 
+
+}

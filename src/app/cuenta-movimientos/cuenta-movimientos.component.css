@@ -1,0 +1,24 @@
+.imagenB img{
+    width: 300px;
+    padding: 20px;
+}
+
+.imagenB {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .image{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
